@@ -18,3 +18,10 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('testmiddleware', function()
+{
+	echo'Testmiddleware Hisoka-desu... :D';
+
+})->middleware('auth');
